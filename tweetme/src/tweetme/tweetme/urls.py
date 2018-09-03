@@ -23,7 +23,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    url(r'^tweet/', include('tweets.urls')),
+    url(r'^tweet/', include('tweets.urls', namespace='tweet')),
 ] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
